@@ -4,13 +4,6 @@
   "version": "0.0.0-development",
   "description": "This repo contains an example React App, with the tests written in Cypress",
   "scripts": {
-    "cypress:version": "cypress version",
-    "cypress:verify": "cypress verify",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
-    "cypress:run:record": "cypress run --record",
-    "cypress:run:chrome": "cypress run --browser chrome",
-    "cypress:run:headed": "cypress run --headed",
     "dev": "run-p --race start:ci cypress:open",
     "start": "http-server -p 8888 -c-1",
     "start:ci": "http-server -p 8888 -c-1 --silent",
@@ -21,8 +14,7 @@
     "test:ci:headed": "run-p --race start:ci cypress:run:headed",
     "lint": "eslint --fix cypress/integration/*.js cypress/support/*.js",
     "effective:circle:config": "circleci config process circle.yml | sed /^#/d",
-    "types": "tsc --noEmit",
-    "e2e": "cypress run"
+    "types": "tsc --noEmit"
   },
   "dependencies": {
     "director": "1.2.8",
@@ -33,8 +25,6 @@
   },
   "devDependencies": {
     "axe-core": "3.5.3",
-    "cypress": "4.9.0",
-    "cypress-axe": "0.5.3",
     "eslint": "6.8.0",
     "eslint-plugin-cypress-dev": "3.0.0",
     "eslint-plugin-mocha": "5.3.0",
